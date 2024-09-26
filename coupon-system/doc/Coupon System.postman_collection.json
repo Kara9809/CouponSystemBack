@@ -1,0 +1,722 @@
+{
+	"info": {
+		"_postman_id": "554f579f-341e-4992-a7ad-8241cd72abf8",
+		"name": "Coupon System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33493201"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\" : \"admin\",\r\n    \"clientType\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "a61679d3-46f4-4a54-be1c-f26eb472e72d"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"amazon\",\r\n    \"email\" : \"amazon@gmail.com\",\r\n    \"password\" : \"1234\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update company",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "f911f611-1338-4317-918a-cc30b4c6300c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\" : \"amazon\",\r\n    \"email\" : \"amazon2@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete company",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "a61679d3-46f4-4a54-be1c-f26eb472e72d"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/company/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"company",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add customer Moshe",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "5b096885-0f1d-40d3-a8ec-065a7e55d449"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"Moshe\",\r\n    \"lastName\" : \"Vasserman\",\r\n    \"email\" : \"moshe@gmail.com\",\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "5b096885-0f1d-40d3-a8ec-065a7e55d449"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"firstName\" : \"Moshe\",\r\n    \"lastName\" : \"Vaserman\",\r\n    \"email\" : \"moshe@gmail.com\",\r\n    \"password\" : \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "5b096885-0f1d-40d3-a8ec-065a7e55d449"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/customer/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"customer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "5b096885-0f1d-40d3-a8ec-065a7e55d449"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/customer/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"customer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "all admin's requests"
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "company login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"amazon@gmail.com\",\r\n    \"password\" : \"1234\",\r\n    \"clientType\" : \"COMPANY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "2db1d59d-6234-4680-978a-a6a587fc4e43"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company\": \"amazon\",\r\n    \"category\": \"FOOD\",\r\n    \"title\": \"delicious\",\r\n    \"description\": \"Very delicious\",\r\n    \"startDate\": \"2024-05-20\",\r\n    \"endDate\": \"2024-06-01\",\r\n    \"amount\": \"10\",\r\n    \"price\": \"1.9\",\r\n    \"image\": \"noImage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/company/coupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"company",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update coupon",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "2db1d59d-6234-4680-978a-a6a587fc4e43"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"company\": \"amazon\",\r\n    \"category\": \"FOOD\",\r\n    \"title\": \"delicious\",\r\n    \"description\": \"Very delicious\",\r\n    \"startDate\": \"2024-05-20\",\r\n    \"endDate\": \"2024-06-01\",\r\n    \"amount\": \"11\",\r\n    \"price\": \"1.9\",\r\n    \"image\": \"noImage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/company/coupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"company",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete coupon",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "2db1d59d-6234-4680-978a-a6a587fc4e43"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/company/1?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"company",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all company coupons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "e9ad56b7-e46e-4122-a005-47e740e187e8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/company/coupons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"company",
+								"coupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get coupons by category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "e9ad56b7-e46e-4122-a005-47e740e187e8"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/company/coupons/category?category=FOOD",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"company",
+								"coupons",
+								"category"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "FOOD"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get coupons by max price",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "54648561-c282-4aee-bf40-60539a07216e"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/company/coupons/max-price?maxPrice=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"company",
+								"coupons",
+								"max-price"
+							],
+							"query": [
+								{
+									"key": "maxPrice",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get company details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "e9ad56b7-e46e-4122-a005-47e740e187e8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/company/details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"company",
+								"details"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "All company's requests to fetch coupons"
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "customer login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "5b096885-0f1d-40d3-a8ec-065a7e55d449"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"moshe@gmail.com\",\r\n    \"password\" : \"12345\",\r\n    \"clientType\": \"CUSTOMER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "purchase coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "16cc03b1-0bd5-4343-963b-b509c2632f3f"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/customer/purchase?couponId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer",
+								"purchase"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "couponId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer coupons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "43dee14e-2877-496e-81df-156da514496b"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/customer/coupons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer",
+								"coupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cust coupons by category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "43dee14e-2877-496e-81df-156da514496b"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/customer/coupons/category?category=FOOD",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer",
+								"coupons",
+								"category"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "FOOD"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cust coupons by max price",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "43dee14e-2877-496e-81df-156da514496b"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/customer/coupons/max-price?maxPrice=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer",
+								"coupons",
+								"max-price"
+							],
+							"query": [
+								{
+									"key": "maxPrice",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "43dee14e-2877-496e-81df-156da514496b"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/customer/details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer",
+								"details"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "All customer's requests to fetch coupons"
+		}
+	]
+}
